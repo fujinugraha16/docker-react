@@ -5,6 +5,7 @@ WORKDIR /app
 COPY package.json .
 RUN npm install
 
+# do we need copy?
 COPY . .
 
 # additional steps because docker run on root linux system
