@@ -7,3 +7,4 @@ before_install:
 
 script:
   - docker container run fujinugraha/docker-react npm run test -- --coverage
+#
