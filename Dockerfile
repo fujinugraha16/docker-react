@@ -5,6 +5,7 @@ RUN npm install
 COPY . .
 # additional steps because docker run on root linux system
 RUN chown -R node /app/node_modules
+RUN chown -R node /app/build
 USER node
 # ------
 RUN npm run build
