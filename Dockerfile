@@ -1,6 +1,6 @@
 FROM node:alpine AS builder
 WORKDIR '/app'
-COPY package.json .
+COPY package*.json ./
 RUN npm install
 COPY . .
 # additional steps because docker run on root linux system
