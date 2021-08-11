@@ -2,7 +2,7 @@ FROM node:alpine AS builder
 WORKDIR '/app'
 COPY package*.json ./
 RUN npm install
-COPY . .
+COPY ./ ./
 # additional steps because docker run on root linux system
 RUN chown -R node /app/node_modules
 RUN chown -R node /app/build
