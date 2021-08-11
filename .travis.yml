@@ -7,4 +7,24 @@ before_install:
 
 script:
   - docker container run fujinugraha/docker-react npm run test
-#
+
+deploy:
+  provider: elasticbeanstalk
+  access_key_id:
+    secure: "AKIA4YFXG55JII55VLXQ"
+  secret_access_key:
+    secure: "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"
+  region: "ap-southeast-1"
+  app: "docker-react"
+  env: "Dockerreact-env"
+  bucket_name: "elasticbeanstalk-ap-southeast-1-876557561682"
+
+  # provider: elasticbeanstalk
+  # access_key_id:
+  #   secure: "Encrypted <access-key-id>="
+  # secret_access_key:
+  #   secure: "Encypted <secret-access-key>="
+  # region: "us-east-1"
+  # app: "example-app-name"
+  # env: "example-app-environment"
+  # bucket_name: "the-target-S3-bucket"
